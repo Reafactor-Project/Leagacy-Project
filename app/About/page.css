@@ -1,0 +1,83 @@
+.team-wrap {
+  margin-bottom: 30px;
+}
+
+.team-member {
+  position: relative;
+}
+
+.team-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-img img {
+  max-width: 30%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-details {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.team-member:hover .overlay {
+  opacity: 1;
+}
+
+.team-title {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bottom-line {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.bottom-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  background-color: #000;
+  transform: translateX(-50%);
+}
+
+#text-center{
+position: relative;
+right:-650px;
+}
