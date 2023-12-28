@@ -1,64 +1,36 @@
-Overview
-Design
-This project is focused on rapid iteration and continuous deployment. Far above the viability of the application as a 'product' or your team as a potential start-up.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Your teams have been assigned (seen below). You will work with your team to generate project ideas, delegate roles, and build something awesome.
+## Getting Started
 
-In a real work environment, you'll rarely have the opportunity to choose all of the people you collaborate with. Your success as an engineer will, in large part, be determined by how well you're able to integrate with varied groups of engineers. The ability to contribute to a shared vision and iterate towards it effectively among peers is extremely valuable. This sprint will help you hone that skill.
+First, run the development server:
 
-Greenfield Learning Objectives:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-project documentation
-group dynamics and collaboration
-product implementation
-project architecture
-product design
-During the greenfield project, you must document your code, syntax styling, git workflow, and feature roadmap in sufficient detail so that it can be handed to an arbitrary team with virtually no explanation.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This repo contains templates that you'll use as a guide to successfully document and structure your project on Github. As you begin your project, you'll copy over the templates into a brand-new repo (public) you'll create as part of the process described below --DON'T DO THAT YET (follow the steps).
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Steps to follow
+## Learn More
 
-start by checking the Figma model that you will follow.
-One of the team members must Create a new GitHub Organization account  Links to an external site. for your team using your codename. Using a GitHub org ensures that all members share equally in the glory of the project.
- Add all your teammates as members of the new org.
- Create a new project repo (same name as the org) in your new org
+To learn more about Next.js, take a look at the following resources:
 
-As an e-commerce project, there are several features that can be implemented for different users: the admin, client, and seller. Here are some of the features that you will be working on during this week:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Admin Dashboard:
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-As an admin, I want to be able to log in to the admin dashboard securely.
-As an admin, I want to view and manage the list of registered clients.
-As an admin, I want to view and manage the list of registered sellers.
-As an admin, I want to have the ability to add new categories or update existing categories for products.
-As an admin, I want to be able to view and manage the products listed on the platform.
-As an admin, I want to manage user permissions and roles.
-Client:
+## Deploy on Vercel
 
-As a client, I want to be able to sign up for a new account.
-As a client, I want to log in to my account securely.
-As a client, I want to edit my profile.
-As a client, I want to view the list of available products.
-As a client, I want to search for products based on different criteria.
-As a client, I want to add products to my cart for purchase.
-As a client, I want to proceed to checkout and make a secure payment.
-As a client, I want to rate and review products that I have purchased.
-Seller:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-As a seller, I want to sign up for a new seller account.
-As a seller, I want to log in to my seller account securely.
-As a seller, I want to edit my profile.
-As a seller, I want to add and manage my products for sale.
-As a seller, I want to update the stock availability and pricing for my products.
-
- 
-Technologies to use:
-React https://react.dev/
-node js/express js
-Cloudinary https://cloudinary.com/
-JWT using cookies medium article
-Sequelize (ORM) https://sequelize.org/
-Payment via Flousi https://flouci.com/en/developers (EXTRA FEATURE)
-Materiel UI https://mui.com/
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
