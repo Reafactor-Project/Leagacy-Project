@@ -1,5 +1,5 @@
 const config={
-    database:"BuyMeAll",
+    database:"buymeall",
     user:"root",
     password:"root"
 
