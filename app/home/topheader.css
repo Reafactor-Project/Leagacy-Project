@@ -1,0 +1,22 @@
+.topheader {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 10px;
+    width: 100%;
+    font-family: 'poppins', sans-serif;
+    color:rgb(255, 255, 255);
+    position: relative;
+    right: 12px;
+    top: -8px;
+  }
+  .centered{
+    display: flex;
+    text-align: center;
+    margin-left:420px ;
+  }
+  .line{
+    text-decoration: underline;
+    cursor: pointer;
+  }

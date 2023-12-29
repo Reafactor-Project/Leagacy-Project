@@ -2,7 +2,9 @@
 const nextConfig = {
     images :{
         domains :[
-            "https://www.shorturl.at/","i.pinimg.com"
+            "https://www.shorturl.at/","i.pinimg.com","www.simplilearn.com","i.postimg.cc"
+            
+    
         ]
     }
 }
