@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import axios from "axios";
 // import Header from "../components/Header";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-// import Products from "../products/page.jsx";
+import Products from "../seller/products/page";
 import SellerProfile from "../seller/sellerprofile/page";
-// import "./seller.css";
+import "./seller.css";
 
 interface User {
   user_img: string;
