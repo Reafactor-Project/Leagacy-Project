@@ -4,7 +4,8 @@ import axios from "axios";
 // import Header from "../components/Header";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 // import Products from "../products/page.jsx";
-import SellerProfile from "../seller/sellerprofile/page.tsx";
+import SellerProfile from "../seller/sellerprofile/page";
+// import "./seller.css";
 
 interface User {
   user_img: string;
