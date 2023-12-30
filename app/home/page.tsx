@@ -2,7 +2,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Header from './Link';
+import Footer from '../Footer/page';
+import Header from '../Link/Header';
 
 interface Product {
   id: string;
@@ -31,7 +32,7 @@ const ECommerceHomePage = () => {
 
   return (
     <div className="container mx-auto p-4 pt-6 md:p-8 lg:pt-12 xl:pt-16 2xl:pt-20">
-        <Header/>
+        <Header value='' user={Object}/>  
       <header className="border-b-2 border-gray-200 py-8 shadow-md z-10 flex justify-content-space-between align-items-center">
         <h1 className="text-4xl font-bold leading-tight text-gray-800 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">
           BuyMeAll
@@ -64,8 +65,8 @@ const ECommerceHomePage = () => {
           ))
         )}
       </main>
-      <footer className="bg-gray-100 py-8 shadow-md z-10 flex justify-content-space-between align-items-center">
-        <div className="text-sm leading-tight text-gray-500">&copy; 2023 Electronics Store.</div>
+      <footer >
+      <Footer/>
       </footer>
     </div>
   );
