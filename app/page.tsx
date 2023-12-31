@@ -1,8 +1,8 @@
 // pages/index.tsx
-
 import Head from 'next/head';
-import TopHeader from './TopHeader/page';
-import Footer from './Footer/page';
+import TopHeader from './home/TopHeader';
+import Footer from './home/Footer';
+import Homee from './home/home';
 
 const Home: React.FC = () => {
   return (
@@ -13,10 +13,11 @@ const Home: React.FC = () => {
       </Head>
       <header>
       <TopHeader />
-        <h1>Welcome to my Next.js App</h1>
 
       </header>
       <main>
+      <Homee />
+
       </main>
       <footer>
       <Footer/>
