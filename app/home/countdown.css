@@ -1,0 +1,45 @@
+.timer-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'poppins', sans-serif;
+  }
+  
+  .timer-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+   
+#timer-heading{
+position: relative;
+left: -650px;
+top: 200px;
+font-family: 'poppins', sans-serif;
+color: red;
+
+}
+
+#timerrr-heading{
+    position: relative;
+    left: -630px;
+    top: 200px;
+    font-family: 'poppins', sans-serif;
+    }
+
+  .timer {
+    font-size: 36px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    left: -420px;
+    top: -280px;
+  }
+  
+#flashsales{
+position: relative;
+top: -200px;
+right: 620px;
+
+}
