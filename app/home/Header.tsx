@@ -73,7 +73,7 @@ const StyledInputBase = styled("input")(({ theme }) => ({
 
 interface HeaderProps {
   value: number;
-  user: any; // Update the type based on your user object structure
+  user: any;
 }
 
 const Header: React.FC<HeaderProps> = ({ value, user }) => {
@@ -101,12 +101,13 @@ const Header: React.FC<HeaderProps> = ({ value, user }) => {
 
   const handleTabChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     if (newValue === 0) router.push("/");
-    else if (newValue === 3) router.push("/SignIn");
+    else if (newValue === 3) router.push("/register");
+    else if (newValue === 2) router.push("/About");
     setSelectedTab(newValue);
   };
 
   const profileVerif = () => {
-    user === null ? router.push("/SignIn") : router.push("/Profile");
+    user === null ? router.push("/login") : router.push("/Profile");
   };
 
   const logOut = () => {
