@@ -1,18 +1,32 @@
 "use client";
-// import React from "react";
-
-import React, { createContext, useContext, useReducer, ReactNode } from "react";
-import { IdentityProvider } from "../app/AuthorContext/IdentityContext";
+// import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import TopHeader from "../app/home/TopHeader";
+import Footer from "../app/home/Footer";
+import Header from "./home/Header";
+import { IdentityProvider } from "../app/AuthorContext/IdentityContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+interface MainLayoutProps {
+  children: React.ReactNode;
+  headerProps: {
+    value: number;
+    user: any;
+  };
+}
+
+export default function MainLayout({ children, headerProps }: MainLayoutProps) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <IdentityProvider>{children}</IdentityProvider>
-      </body>
-    </html>
+    <IdentityProvider>
+      <html lang="en">
+        <body>
+          <TopHeader />
+          <Header {...headerProps} />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </IdentityProvider>
   );
 }

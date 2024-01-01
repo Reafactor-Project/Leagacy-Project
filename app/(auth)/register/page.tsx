@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { useIdentity } from "../../AuthorContext/IdentityContext";
 import Cookies from "js-cookie";
 import Link from "next/link";
+import "../register/SignUp.css";
+// import Header from "../../home/Header";
 
 import {
   Box,
@@ -15,8 +17,8 @@ import {
   FormControlLabel,
   FormLabel,
 } from "@mui/material";
-import TopHeader from "../../home/TopHeader";
-import Footer from "../../home/Footer";
+// import TopHeader from "../../home/TopHeader";
+// import Footer from "../../home/Footer";
 const Register = () => {
   const router = useRouter();
   const [username, setUsername] = useState("");
@@ -69,7 +71,7 @@ const Register = () => {
   return (
     <>
       <div className="divSignUp">
-        <TopHeader />
+        {/* <TopHeader /> */}
         {/* <Header value={3} /> */}
 
         <div className="divUp21">
@@ -206,7 +208,7 @@ const Register = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

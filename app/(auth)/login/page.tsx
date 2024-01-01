@@ -4,12 +4,13 @@ import axios from "axios";
 import { useIdentity } from "../../AuthorContext/IdentityContext";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
-import TopHeader from "../../home/TopHeader";
-// import Header from "../Header/Header";
-import Footer from "../../home/Footer";
+// import TopHeader from "../../home/TopHeader";
+// import Header from "../../home/Header";
+// import Footer from "../../home/Footer";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";
+import "../login/SignIn.css";
 
 const SignIn = () => {
   const [userPassword, setUserPassword] = useState("");
@@ -54,7 +55,7 @@ const SignIn = () => {
   return (
     <>
       <div className="divSignIn">
-        <TopHeader />
+        {/* <TopHeader /> */}
         {/* <Header value={3} /> */}
 
         <div className="divS21">
@@ -129,7 +130,7 @@ const SignIn = () => {
             </div>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
       <style jsx>{`
         // Add your styles here
