@@ -1,11 +1,12 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import TopHeader from "../../home/TopHeader";
 import Footer from "../../home/Footer";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import Rating from '@mui/material/Rating';
-import Stack from '@mui/material/Stack';
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
+import "../[id]/ProductDetails.css";
 
 interface Product {
   id: string;
@@ -15,7 +16,7 @@ interface Product {
   price: number;
   description: string;
   image: string;
-  sales:number
+  sales: number;
 }
 
 interface User {
@@ -34,7 +35,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ user }) => {
   const router = useRouter();
 
   const addFavorite = (obj: { userId: string; productId: string }) => {
-    axios.post("http://localhost:3000/api/BuyMeAll/favorite", obj)
+    axios
+      .post("http://localhost:3000/api/BuyMeAll/favorite", obj)
       .then((response) => {
         const responseData = response.data.products;
         // Handle the response data as needed
@@ -46,21 +48,21 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ user }) => {
 
   const extractImages = (str: string) => {
     if (str !== undefined) {
-      return str.split(',');
+      return str.split(",");
     } else {
       return [];
     }
   };
   useEffect(() => {
-  
     var currentUrl = window.location.href;
-    var endPoint=currentUrl.split("/")
-    var id=endPoint[endPoint.length-1]
-      axios.get(`http://localhost:3000/api/BuyMeAll/products/${id}`).then((result) => {
+    var endPoint = currentUrl.split("/");
+    var id = endPoint[endPoint.length - 1];
+    axios
+      .get(`http://localhost:3000/api/BuyMeAll/products/${id}`)
+      .then((result) => {
         setOneProduct(result.data);
         setOneProdImg(extractImages(result.data.image));
       });
-    
   }, []);
 
   return (
@@ -72,7 +74,13 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ user }) => {
             <div className="divProduct29">
               <div className="columnP">
                 {oneProdImg.map((el, i) => (
-                  <div key={i} onClick={() => { setIdImg(i) }} className="divProduct30">
+                  <div
+                    key={i}
+                    onClick={() => {
+                      setIdImg(i);
+                    }}
+                    className="divProduct30"
+                  >
                     <div className="divProduct31">
                       <img
                         loading="lazy"
@@ -83,18 +91,27 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ user }) => {
                   </div>
                 ))}
               </div>
-              <div className="columnProduct2">
-               
-              </div>
+              <div className="columnProduct2"></div>
               <div className="columnProduct3">
                 <div className="divProduct36">
                   <div className="divProduct37">{oneProduct?.product_name}</div>
                   <div className="divProduct38">
                     <div className="divProduct39">
-                      {parseFloat(oneProduct?.rate?.toString() ?? '') && <Stack spacing={1}>
-                        <Rating name="half-rating" defaultValue={parseFloat(oneProduct?.rate?.toString() ?? '')} precision={0.5} readOnly />
-                      </Stack>}
-                      <div className="divProduct40">({oneProduct?.quantity})</div>
+                      {parseFloat(oneProduct?.rate?.toString() ?? "") && (
+                        <Stack spacing={1}>
+                          <Rating
+                            name="half-rating"
+                            defaultValue={parseFloat(
+                              oneProduct?.rate?.toString() ?? ""
+                            )}
+                            precision={0.5}
+                            readOnly
+                          />
+                        </Stack>
+                      )}
+                      <div className="divProduct40">
+                        ({oneProduct?.quantity})
+                      </div>
                     </div>
                     <div className="divProduct41">In Stock</div>
                   </div>
@@ -103,15 +120,18 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ user }) => {
                   <div className="divProduct44" />
 
                   <div className="divProduct57">
-                    <div className="divProduct60" ><div className="buyBtn">Buy Now</div></div>
+                    <div className="divProduct60">
+                      <div className="buyBtn">Buy Now</div>
+                    </div>
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec08a593d461e728db2a3e431df9e075d5f9912126c045dc62171b9ec6894644?"
                       className="imgProduct14"
                       onClick={() => {
-                        addFavorite(
-                          { userId: user.id, productId: oneProduct?.id || "" }
-                        );
+                        addFavorite({
+                          userId: user.id,
+                          productId: oneProduct?.id || "",
+                        });
                       }}
                     />
                   </div>
@@ -156,6 +176,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ user }) => {
       </div>
     </>
   );
-}
+};
 
 export default ProductDetails;

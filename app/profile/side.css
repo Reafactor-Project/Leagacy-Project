@@ -1,0 +1,59 @@
+.manage-my-account,
+.my-orders,
+.my-wishlist {
+  position: absolute;
+  top: 200px;
+  left: 135px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.my-orders,
+.my-wishlist {
+  top: 23rem;
+}
+.my-wishlist {
+  top: 540px;
+  display: inline-block;
+  width: 93px;
+  height: 23px;
+}
+.address-book,
+.my-profile {
+  position: relative;
+  line-height: 24px;
+}
+.my-profile {
+  color: brown;
+}
+
+.address-book {
+  opacity: 0.5;
+}
+.my-profile-parent,
+.my-returns-parent {
+  position: absolute;
+  top: 280px;
+  left: 170px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.my-returns-parent {
+  top: 25rem;
+}
+
+/* .side{
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 500px;
+  margin-top: 500px;
+ 
+
+} */
