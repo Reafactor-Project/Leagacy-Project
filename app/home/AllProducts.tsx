@@ -32,8 +32,8 @@ const ProductDisplay: React.FC = () => {
     setShowAll((prevShowAll) => !prevShowAll);
   };
 
-  const displayProducts = products.slice(0, 5);
-  const remainingProducts = products.slice(5);
+  const displayProducts = Object.values(products).slice(0, 5);
+  const remainingProducts = Object.values(products).slice(5);
 
   return (
     <div>
