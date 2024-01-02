@@ -11,6 +11,7 @@ const Home: React.FC = () => {
         <title>My Next.js App</title>
         <meta name="description" content="Welcome to my Next.js app!" />
       </Head>
+
       <header>{/* <TopHeader /> */}</header>
       <main>
         <Homee />

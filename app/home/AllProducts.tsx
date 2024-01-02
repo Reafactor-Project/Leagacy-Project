@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "./AllProducts.css";
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './AllProducts.css';
+import  Link  from 'next/link'
+
 
 interface Product {
   id: string;
@@ -36,16 +39,20 @@ const ProductDisplay: React.FC = () => {
     setShowAll((prevShowAll) => !prevShowAll);
   };
 
+
   return (
     <div>
       <div className="product-listssss">
         {displayProducts.map((product: Product) => (
           <div key={product.id} className="producttt">
+            <Link href={`/productDetails/${product.id}`}>
             <img
               className="product-image"
               src={product.image ? product.image : ""}
               alt={product.product_name}
             />
+            </Link>
+
             <h3>{product.product_name}</h3>
             <p>{product.price}$</p>
           </div>

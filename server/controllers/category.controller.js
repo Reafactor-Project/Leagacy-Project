@@ -1,5 +1,6 @@
 const {Categories,Product}=require('../database-Sequelize/index')
 
+
 const AllCategory = async(req,res) => {
     try {
     const result=await Categories.findAll({
