@@ -1,0 +1,38 @@
+.category-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  top: 200px;
+  position: relative;
+  justify-content: space-between;
+}
+.category-flex1{
+  border-width:10px;
+  text-align: center;
+  width: 220px;
+  height: 100px;
+  margin-right: auto;
+}
+.category-icon{
+  width: 200px;
+  height: 200px;
+}
+
+.square {
+  width: 20px;
+  height: 40px;
+  background-color: #b82d2d; 
+  border: solid transparent;
+  border-radius: 5px;
+  margin-right: 10px; }
+
+
+
+#cetegories{
+position: relative;
+top: 100px;
+right: -10px;
+
+
+}

@@ -31,9 +31,7 @@ const Product =(connection,DataTypes)=>{
       seller_id:{
         type: DataTypes.INTEGER,
         allowNull: true,
-      },
-      
-    
+      },    
   })};
 
 module.exports=Product;

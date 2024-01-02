@@ -1,0 +1,54 @@
+.imagee-containerss{
+    position: relative;
+    top: 350px;
+    width: 80%;
+    right: -10px;
+    }
+    .product-listt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        margin-top: 390px;
+      }
+      
+      .product {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid transparent;
+        padding: 8px; 
+        margin: 4px; 
+        width: 180px;
+        text-align: center;
+        font-family: Poppins, sans-serif;
+      font-weight: bold;
+      }
+      
+      .product-image {
+        position: relative;
+        width: 309px; 
+        height: auto;
+        margin-bottom: 8px; 
+      }
+      
+      .product h3 {
+        margin: 0;
+        font-size: 16px; 
+      }
+      
+      .product p {
+        margin: 4px 0; 
+        font-size: 14px; 
+      }
+        
+
+    
+      
+          .product-price{
+            position: relative;
+            color: #DB4444;
+            right: 40px;
+            font-size: 11px; 
+      
+          }
