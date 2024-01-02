@@ -15,6 +15,7 @@ interface Product {
   price: number;
   description: string;
   image: string;
+  sales:number
 }
 
 interface User {
@@ -44,9 +45,12 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ user }) => {
   };
 
   const extractImages = (str: string) => {
-    return str.split(',');
+    if (str !== undefined) {
+      return str.split(',');
+    } else {
+      return [];
+    }
   };
-
   useEffect(() => {
   
     var currentUrl = window.location.href;
@@ -80,13 +84,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ user }) => {
                 ))}
               </div>
               <div className="columnProduct2">
-                <div className="divProduct35">
-                  <img
-                    loading="lazy"
-                    srcSet={oneProdImg[idImg]}
-                    className="imgProduct9"
-                  />
-                </div>
+               
               </div>
               <div className="columnProduct3">
                 <div className="divProduct36">
