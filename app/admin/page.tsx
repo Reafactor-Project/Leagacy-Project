@@ -1,9 +1,8 @@
 import React from "react";
-import './Seller.css';
-import NavbarSeller from "./navebareSeller";
+import './Admin.css';
+import Navbar from "./navebarAdmin";
 
-
-const Seller: React.FC = () => {
+const Admin: React.FC = () => {
   // Replace these placeholders with actual data
   const email = "user@example.com";
   const name = "John Doe";
@@ -12,7 +11,7 @@ const Seller: React.FC = () => {
     <>
       <div className="divAdmin">
         <div className="divAdmin2">
-          <NavbarSeller/>
+          <Navbar/>
 
         </div>
       </div>
@@ -20,4 +19,4 @@ const Seller: React.FC = () => {
   );
 };
 
-export default Seller;
+export default Admin;
