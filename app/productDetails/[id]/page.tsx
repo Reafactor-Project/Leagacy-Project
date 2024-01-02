@@ -6,6 +6,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
+import './details.css'
 
 interface Product {
   id: string;
