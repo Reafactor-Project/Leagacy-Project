@@ -12,10 +12,6 @@ const Product =(connection,DataTypes)=>{
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    sales: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     image : {
         type: DataTypes.STRING,
         allowNull: false,
