@@ -1,10 +1,11 @@
-import React from 'react';
-import Footer from '../Footer/page';
-import TopHeader from '../TopHeader/page'
-import Header from '../Header/Header';
-import './Cart.css';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+"use client";
+import React from "react";
+// import Footer from '../Footer/page';
+// import TopHeader from '../TopHeader/page'
+// import Header from '../Header/Header';
+import "../Cart/Cart.css";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 
 interface Product {
   id: number;
@@ -21,18 +22,23 @@ interface CartProps {
 }
 
 const Cart: React.FC<CartProps> = ({ taktak, user }) => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
-  const stor: Product[] = JSON.parse(localStorage.getItem('basket') as string) || [];
-  
+  const stor: Product[] =
+    JSON.parse(localStorage.getItem("basket") as string) || [];
+
   const totalPrice = () => {
     const totalArray = stor.map((el) => el.price);
     return totalArray.reduce((acc, curr) => acc + curr, 0);
   };
 
-  const addOrder = async (obj: { send: boolean; userId: number; productId: number }) => {
+  const addOrder = async (obj: {
+    send: boolean;
+    userId: number;
+    productId: number;
+  }) => {
     try {
-      await axios.post('http://localhost:3000/api/BuyMeAll/orders', obj);
+      await axios.post("http://localhost:3000/api/BuyMeAll/orders", obj);
     } catch (error) {
       console.error(error);
     }
@@ -46,20 +52,18 @@ const Cart: React.FC<CartProps> = ({ taktak, user }) => {
         productId: el.id,
       });
     });
-    localStorage.removeItem('basket');
-    alert('Thanks for your purchase');
-    navigate('/');
+    localStorage.removeItem("basket");
+    alert("Thanks for your purchase");
+    router.push("/");
   };
 
   return (
     <>
       <div className="divCart">
-      <TopHeader/>
-      <Header/>
+        {/* <TopHeader/>
+      <Header/> */}
 
-        
         <div className="divCart23">
-          
           <div className="divCart27">
             <div className="divCart28">
               <div className="divCart29">Product</div>
@@ -68,24 +72,26 @@ const Cart: React.FC<CartProps> = ({ taktak, user }) => {
               <div className="divCart29">Subtotal</div>
             </div>
           </div>
-          {stor.length?stor.map((el,i)=>(
-          <div key={i} className="divCart33">
-            <div className="divCart34">
-              <img
-                loading="lazy"
-                srcSet={taktak(el.image)[0]}
-                className="imgCart5"
-              />
-              
-            </div>
-            <div className="divCart36">{el.product_name}</div>
-            <div>1</div>
-            <div className="divCart37">{el.price}</div>
-          </div>)):<h1>Empty Busket</h1>}
-          
-          <div className="divCart43">
-            
-          </div>
+          {stor.length ? (
+            stor.map((el, i) => (
+              <div key={i} className="divCart33">
+                <div className="divCart34">
+                  <img
+                    loading="lazy"
+                    srcSet={taktak(el.image)[0]}
+                    className="imgCart5"
+                  />
+                </div>
+                <div className="divCart36">{el.product_name}</div>
+                <div>1</div>
+                <div className="divCart37">{el.price}</div>
+              </div>
+            ))
+          ) : (
+            <h1>Empty Busket</h1>
+          )}
+
+          <div className="divCart43"></div>
           <div className="divCart46">
             <div className="divCart47">
               <div className="columnCart2">
@@ -105,20 +111,23 @@ const Cart: React.FC<CartProps> = ({ taktak, user }) => {
                     <div className="divCart62">Total:</div>
                     <div className="divCart63">${totalPrice()}</div>
                   </div>
-                  <div className="divCart64" onClick={()=>{
-                    user===null?navigate('/SignIn'):
-                    handlePurchase()
-                    }}>Purchase</div>
+                  <div
+                    className="divCart64"
+                    onClick={() => {
+                      user === null ? router.push("/login") : handlePurchase();
+                    }}
+                  >
+                    Purchase
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    <Footer/>
+        {/* <Footer/> */}
       </div>
     </>
   );
-}
+};
 
-
-export default Cart
+export default Cart;
